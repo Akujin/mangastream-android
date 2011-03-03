@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, mainMenu!</string>
+	<string name="app_name">MangaStream</string>
+
+	<string-array name="settingsUpdateIntervalKeys">
+		<item>10 Minutes</item>
+		<item>20 Minutes</item>
+		<item>30 Minutes</item>
+		<item>40 Minutes</item>
+		<item>50 Minutes</item>
+		<item>60 Minutes</item>
+	</string-array>
+
+	<string-array name="settingsUpdateIntervalValues">
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>60</item>
+	</string-array>
+
+	<string name="ButtonYes">Yes</string>
+	<string name="ButtonNo">No</string>
+
+
+</resources>

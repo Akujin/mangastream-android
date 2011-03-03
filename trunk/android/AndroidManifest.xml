@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.akujin.mangastream"
+      android:versionCode="6"
+      android:versionName="1.1.4"
+      android:debuggable="true">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainMenu"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity android:name=".LatestChapters" android:configChanges="orientation|keyboardHidden" android:label="MangaStream - Latest Chapters"></activity>
+		<activity android:name=".SeriesSelection" android:configChanges="orientation|keyboardHidden" android:label="MangaStream - Manga Series Selection"></activity>
+		<activity android:name=".ChaptersBySeries" android:configChanges="orientation|keyboardHidden" android:label="MangaStream - Chapter Selection By Series"></activity>
+		<activity android:name=".PageView" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name"></activity>
+		<activity android:name=".SettingsDialog" android:configChanges="orientation|keyboardHidden" android:label="MangaStream - Settings"></activity>
+		<service android:name=".MangaStreamService"></service>
+		<receiver android:name=".OnBootReceiver">
+		 <intent-filter>
+		   <action android:name="android.intent.action.BOOT_COMPLETED" />
+		 </intent-filter>
+		</receiver>
+    </application>
+    <uses-sdk android:minSdkVersion="3" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+</manifest> 

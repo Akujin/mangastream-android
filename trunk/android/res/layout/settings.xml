@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<PreferenceScreen android:key="first_preferencescreen"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<CheckBoxPreference android:key="enableNotifications"
+		android:title="Notifications" android:defaultValue="false"
+		android:summary="Enable/Disable Notifications" />
+	<PreferenceScreen android:key="NotificationSettings"
+		android:title="Notification Settings">
+		<ListPreference android:title="Update Interval"
+			android:summary="How often to check for new releases?"
+			android:defaultValue="10" android:key="updateIntervals"
+			android:entries="@array/settingsUpdateIntervalKeys"
+			android:entryValues="@array/settingsUpdateIntervalValues" />
+		<CheckBoxPreference android:key="autoStartService"
+			android:title="Auto-Start Notification Service" android:defaultValue="true"
+			android:summary="Auto-Start Service" />
+		<!-- <CheckBoxPreference android:key="showAllNotifications"
+			android:title="Show All Notifications" android:defaultValue="false"
+			android:summary="Shows all notifications and ignore your favorites" />  -->
+		<RingtonePreference android:name="Notification Ringtone"
+			android:summary="Select a ringtone or make it silent" android:title="Ringtones"
+			android:key="ringtonePref" android:ringtoneType="notification"
+			android:showDefault="true" android:showSilent="true" />
+		<Preference android:id="@+id/notificationLight"
+			android:title="Notification Light Color" android:summary="Pick a color to use for the notification light"
+			android:key="lightPrefDialog" />
+	</PreferenceScreen>
+	<CheckBoxPreference android:key="enableBugReporting"
+		android:title="Bug Reporting" android:defaultValue="true"
+		android:summary="Send Crash Reports (Requires Internet)" />
+</PreferenceScreen>
